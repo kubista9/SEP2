@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.TextFlow?>
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="338.0">
+               <children>
+                  <Hyperlink fx:id="itemsLink" onAction="#swichWindowToItems" text="Items">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </Hyperlink>
+                  <Hyperlink fx:id="basketLink" onAction="#swichWindowToBasket" text="Basket" />
+               </children>
+            </HBox>
+            <Label alignment="CENTER_RIGHT" text="Search">
+               <HBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="searchField" alignment="CENTER_RIGHT">
+               <HBox.margin>
+                  <Insets bottom="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="240.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="productImmage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../OneDrive/Картини/portfolio1.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="227.0" prefWidth="241.0">
+               <children>
+                  <Label text="Name">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Price">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFlow prefHeight="111.0" prefWidth="384.0" />
+                  <Label text="Available Quantity">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Seller">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="384.0">
+               <children>
+                  <Label fx:id="nameLabel" text="Name">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="priceLabel" text="Price">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextFlow prefHeight="111.0" prefWidth="384.0" />
+                  <Label fx:id="avialableQuantityLabel" text="Available Quantity">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="sellerLabel" text="Seller">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AddToBasket" text="Add to basket">
+               <padding>
+                  <Insets bottom="5.0" left="75.0" right="75.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

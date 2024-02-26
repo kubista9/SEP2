@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GameTypesViewController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="338.0">
+         <children>
+            <Hyperlink fx:id="itemsLink" onAction="#swichWindowToItems" text="Items">
+               <HBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </Hyperlink>
+            <Hyperlink fx:id="basketLink" onAction="#swichWindowToBasket" text="Basket" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="720.0" prefWidth="1280.0" spacing="64.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="550.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="ItemNamesSearchBar" onAction="#onSearch" onKeyPressed="#backSpacePressed" prefHeight="50.0" prefWidth="550.0" promptText="Search">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="320.0" prefHeight="450.0" prefWidth="550.0">
+                     <children>
+                        <ScrollPane prefHeight="400.0" prefWidth="550.0">
+                           <content>
+                              <TableView fx:id="gameTypesTable" onMouseClicked="#selectedItem" prefHeight="450.0" prefWidth="550.0">
+                                <columns>
+                                  <TableColumn fx:id="ItemNameColumn" prefWidth="260.0" text="Shared.Item" />
+                                    <TableColumn fx:id="ItemsAmountColumn" prefWidth="90.0" text="Amount" />
+                                    <TableColumn fx:id="ItemSellerColumn" prefWidth="90.0" text="Seller" />
+                                    <TableColumn fx:id="ItemRatingColumn" prefWidth="90.0" text="Rating" />
+                                </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="550.0" spacing="40.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="gameTypesNameField" alignment="CENTER" editable="false" prefHeight="50.0" prefWidth="550.0" text="Shared.Item description">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="286.0" prefWidth="550.0">
+                     <children>
+                        <TextArea fx:id="ItemDescriptionArea" editable="false" prefHeight="354.0" prefWidth="550.0" text="Description&#10;" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+      <HBox prefHeight="250.0" prefWidth="1280.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="640.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="640.0" spacing="60.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#buyButtonPressed" prefHeight="72.0" prefWidth="128.0" text="Buy">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="258.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveBasketPressed" prefHeight="72.0" prefWidth="188.0" text="Save basket">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="330.0" layoutY="10.0" mnemonicParsing="false" onAction="#removeButtonPressed" prefHeight="72.0" prefWidth="128.0" text="Remove">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="640.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="640.0" spacing="100.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
